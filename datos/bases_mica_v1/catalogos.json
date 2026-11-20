@@ -1,0 +1,65 @@
+{
+  "empresa": "MICA",
+  "version": "1.0.0",
+  "naturaleza": "SINTETICA",
+  "departamentos": [
+    {
+      "departamento_id": "DEP-ADM",
+      "nombre": "Administración"
+    },
+    {
+      "departamento_id": "DEP-COM",
+      "nombre": "Comercial"
+    },
+    {
+      "departamento_id": "DEP-TEC",
+      "nombre": "Tecnología"
+    }
+  ],
+  "puestos": [
+    {
+      "puesto_id": "P-ADM-01",
+      "nombre": "Auxiliar Administrativo",
+      "departamento_id": "DEP-ADM"
+    },
+    {
+      "puesto_id": "P-ADM-02",
+      "nombre": "Analista Administrativo",
+      "departamento_id": "DEP-ADM"
+    },
+    {
+      "puesto_id": "P-COM-01",
+      "nombre": "Ejecutivo Comercial",
+      "departamento_id": "DEP-COM"
+    },
+    {
+      "puesto_id": "P-COM-02",
+      "nombre": "Analista Comercial",
+      "departamento_id": "DEP-COM"
+    },
+    {
+      "puesto_id": "P-TEC-01",
+      "nombre": "Analista de Sistemas",
+      "departamento_id": "DEP-TEC"
+    },
+    {
+      "puesto_id": "P-TEC-02",
+      "nombre": "Soporte Técnico",
+      "departamento_id": "DEP-TEC"
+    }
+  ],
+  "modalidades": [
+    "presencial",
+    "hibrida",
+    "remota"
+  ],
+  "tipos_incorporacion": [
+    "nuevo_ingreso"
+  ],
+  "calendario": {
+    "unidad": "dias_naturales",
+    "dia_cero": "fecha_ingreso",
+    "ajustar_festivos": false
+  },
+  "nota": "Catálogo ficticio; no contiene nómina ni empleados reales."
+}
