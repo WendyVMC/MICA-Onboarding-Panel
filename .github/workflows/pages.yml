@@ -1,0 +1,56 @@
+name: Validar y publicar MICA
+on:
+  push:
+    branches: [main]
+    paths: ['panel/**', 'tools/validar_panel.js', 'tests/panel.test.js', 'agentes/herramientas_mica.js', 'datos/bases_mica_v1/**', '.github/workflows/pages.yml']
+  workflow_dispatch:
+    inputs:
+      fallo_deliberado:
+        description: 'Introducir un error real en los datos del artefacto; debe bloquear publicación'
+        required: false
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Verificar reglas y fórmulas
+        run: node tests/panel.test.js
+      - name: Preparar solo archivos públicos
+        run: |
+          mkdir -p _site
+          cp panel/index.html panel/estilos.css panel/app.js panel/metricas.js panel/datos.json _site/
+          touch _site/.nojekyll
+      - name: Inyectar falla deliberada en artefacto de prueba
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.fallo_deliberado }}
+        run: node -e "const fs=require('fs');const p='_site/datos.json';const d=JSON.parse(fs.readFileSync(p));delete d.casos[0].actividades[0].regla_id;fs.writeFileSync(p,JSON.stringify(d));"
+      - name: Bloquear despliegue ante datos inválidos
+        run: node tools/validar_panel.js _site
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  desplegar:
+    needs: validar
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publicar artefacto validado
+        id: deployment
+        uses: actions/deploy-pages@v4
