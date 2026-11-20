@@ -1,0 +1,295 @@
+{
+  "empresa": "MICA",
+  "version": "1.0.0",
+  "naturaleza": "SINTETICA",
+  "fecha_version": "2026-11-04",
+  "tipo": "actividades",
+  "registros": [
+    {
+      "actividad_id": "ACT-G01",
+      "titulo": "Revisar datos de la solicitud ficticia",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "preingreso",
+      "desfase_dias": -3,
+      "responsable_id": "RH-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G02",
+      "titulo": "Preparar agenda de bienvenida simulada",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "preingreso",
+      "desfase_dias": -1,
+      "responsable_id": "RH-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G03",
+      "titulo": "Presentar MICA y sus canales de apoyo ficticios",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primer_dia",
+      "desfase_dias": 0,
+      "responsable_id": "RH-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G04",
+      "titulo": "Realizar orientación sobre manejo de datos sintéticos",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primer_dia",
+      "desfase_dias": 0,
+      "responsable_id": "TI-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G05",
+      "titulo": "Revisar avance de incorporación de primera semana",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 6,
+      "responsable_id": "RH-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G06",
+      "titulo": "Comprobar entorno de práctica remota sin asignar accesos reales",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "remota",
+        "hibrida"
+      ],
+      "fase": "preingreso",
+      "desfase_dias": -1,
+      "responsable_id": "TI-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-G07",
+      "titulo": "Compartir orientación de sede ficticia sin coordinar visitas reales",
+      "regla_id": "POL-04",
+      "fuente_version": "1.0.0",
+      "departamento_id": null,
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida"
+      ],
+      "fase": "preingreso",
+      "desfase_dias": -1,
+      "responsable_id": "RH-01",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-ADM-01",
+      "titulo": "Revisar flujo administrativo con documentos ficticios",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-ADM",
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 1,
+      "responsable_id": "LID-ADM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-ADM-01",
+      "titulo": "Clasificar una muestra de documentos administrativos ficticios",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-ADM",
+      "puesto_id": "P-ADM-01",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-ADM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-ADM-02",
+      "titulo": "Revisar un reporte administrativo de práctica",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-ADM",
+      "puesto_id": "P-ADM-02",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-ADM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-COM-01",
+      "titulo": "Revisar proceso comercial y catálogo de servicios ficticios",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-COM",
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 1,
+      "responsable_id": "LID-COM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-COM-01",
+      "titulo": "Preparar una propuesta comercial ficticia sin enviarla",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-COM",
+      "puesto_id": "P-COM-01",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-COM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-COM-02",
+      "titulo": "Interpretar un reporte de oportunidades sintéticas",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-COM",
+      "puesto_id": "P-COM-02",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-COM",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-TEC-01",
+      "titulo": "Revisar entorno técnico de demostración y sus límites",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-TEC",
+      "puesto_id": null,
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 1,
+      "responsable_id": "LID-TEC",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-TEC-01",
+      "titulo": "Revisar un caso de sistema en entorno de demostración",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-TEC",
+      "puesto_id": "P-TEC-01",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-TEC",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    },
+    {
+      "actividad_id": "ACT-P-TEC-02",
+      "titulo": "Resolver un ticket ficticio sin modificar equipos reales",
+      "regla_id": "POL-05",
+      "fuente_version": "1.0.0",
+      "departamento_id": "DEP-TEC",
+      "puesto_id": "P-TEC-02",
+      "modalidades": [
+        "presencial",
+        "hibrida",
+        "remota"
+      ],
+      "fase": "primera_semana",
+      "desfase_dias": 3,
+      "responsable_id": "MEN-TEC",
+      "obligatoria": true,
+      "evidencia_esperada": "Registro de realización simulado"
+    }
+  ]
+}
