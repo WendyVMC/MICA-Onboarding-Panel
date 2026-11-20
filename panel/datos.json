@@ -13,6 +13,7 @@
           "actividad_id": "ACT-G01",
           "fecha": "2026-11-28",
           "responsable_id": "RH-01",
+          "regla_id": "POL-04",
           "fuente_version": "1.0.0",
           "vencida_al_recibir": false,
           "titulo": "Revisar datos de la solicitud ficticia"
