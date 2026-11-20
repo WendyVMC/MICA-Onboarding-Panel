@@ -1,0 +1,57 @@
+{
+  "empresa": "MICA",
+  "version": "1.0.0",
+  "naturaleza": "SINTETICA",
+  "fecha_version": "2026-11-04",
+  "tipo": "responsables_ficticios",
+  "registros": [
+    {
+      "responsable_id": "RH-01",
+      "rol": "Coordinación People & Culture",
+      "departamento_id": "TRANSVERSAL",
+      "activo": true
+    },
+    {
+      "responsable_id": "TI-01",
+      "rol": "Coordinación de soporte de incorporación",
+      "departamento_id": "TRANSVERSAL",
+      "activo": true
+    },
+    {
+      "responsable_id": "LID-ADM",
+      "rol": "Líder de departamento",
+      "departamento_id": "DEP-ADM",
+      "activo": true
+    },
+    {
+      "responsable_id": "MEN-ADM",
+      "rol": "Mentoría de incorporación",
+      "departamento_id": "DEP-ADM",
+      "activo": true
+    },
+    {
+      "responsable_id": "LID-COM",
+      "rol": "Líder de departamento",
+      "departamento_id": "DEP-COM",
+      "activo": true
+    },
+    {
+      "responsable_id": "MEN-COM",
+      "rol": "Mentoría de incorporación",
+      "departamento_id": "DEP-COM",
+      "activo": true
+    },
+    {
+      "responsable_id": "LID-TEC",
+      "rol": "Líder de departamento",
+      "departamento_id": "DEP-TEC",
+      "activo": true
+    },
+    {
+      "responsable_id": "MEN-TEC",
+      "rol": "Mentoría de incorporación",
+      "departamento_id": "DEP-TEC",
+      "activo": true
+    }
+  ]
+}
