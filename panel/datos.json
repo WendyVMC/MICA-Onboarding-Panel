@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-16",
-  "fuente": "Propuesta validada en n8n, persistida y consultada por Telegram. Instantánea manual; no conexión en vivo.",
+  "actualizado": "2026-11-19",
+  "fuente": "Piloto simulado n=1; exportación manual sanitizada de n8n. KPIs reconstruidos y auditados, no conexión en vivo.",
   "casos": [
     {
       "caso_id": "MICA-TG-479895069",
@@ -92,10 +92,10 @@
       },
       "fecha_recepcion_local": "2026-11-16",
       "metricas": {
-        "recibido_en": null,
-        "primera_propuesta_revisada_en": null,
-        "primera_revision_humana_en": null,
-        "aprobado_primera_revision_sin_cambios": null
+        "recibido_en": "2026-11-17T03:53:58.000Z",
+        "primera_propuesta_revisada_en": "2026-11-17T04:00:45.675Z",
+        "primera_revision_humana_en": "2026-11-17T04:04:21.116Z",
+        "aprobado_primera_revision_sin_cambios": true
       }
     }
   ],
@@ -103,8 +103,14 @@
   "zona_horaria": "America/Mexico_City",
   "periodo_default": "2026-11",
   "cobertura": {
-    "solicitudes_completa": false,
-    "nota": "Muestra manual de un caso aprobado. No incluye un censo verificable de solicitudes recibidas, ni todas las marcas temporales e historial de primera revisión."
+    "solicitudes_completa": true,
+    "nota": "Censo del piloto autorizado de esta instancia hasta el 19/11/2026: 1 solicitud, 1 propuesta y 1 primera revisión. Propuesta reconstruida como vencimiento menos 24 h; incluye recuperación manual del fallo A3. Completitud reconstruida desde el caso validado y su evento. Aprobación contrastada con el único evento de revisión y versiones 1/2/3. No representa el mes completo ni el rendimiento de la empresa; n=1 no permite generalizar."
   },
-  "solicitudes": []
+  "solicitudes": [
+    {
+      "solicitud_id": "SOL-TG-479895069",
+      "recibido_en": "2026-11-17T03:53:58.000Z",
+      "completa_al_recibir": true
+    }
+  ]
 }
