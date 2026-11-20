@@ -1,0 +1,110 @@
+{
+  "actualizado": "2026-11-16",
+  "fuente": "Propuesta validada en n8n, persistida y consultada por Telegram. Instantánea manual; no conexión en vivo.",
+  "casos": [
+    {
+      "caso_id": "MICA-TG-479895069",
+      "departamento": "Tecnología",
+      "modalidad": "remota",
+      "estado": "registrado_simulado",
+      "version": 3,
+      "actividades": [
+        {
+          "actividad_id": "ACT-G01",
+          "fecha": "2026-11-28",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar datos de la solicitud ficticia"
+        },
+        {
+          "actividad_id": "ACT-G02",
+          "fecha": "2026-11-30",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Preparar agenda de bienvenida simulada"
+        },
+        {
+          "actividad_id": "ACT-G03",
+          "fecha": "2026-12-01",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Presentar MICA y sus canales de apoyo ficticios"
+        },
+        {
+          "actividad_id": "ACT-G04",
+          "fecha": "2026-12-01",
+          "responsable_id": "TI-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Realizar orientación sobre manejo de datos sintéticos"
+        },
+        {
+          "actividad_id": "ACT-G05",
+          "fecha": "2026-12-07",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar avance de incorporación de primera semana"
+        },
+        {
+          "actividad_id": "ACT-G06",
+          "fecha": "2026-11-30",
+          "responsable_id": "TI-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Comprobar entorno de práctica remota sin asignar accesos reales"
+        },
+        {
+          "actividad_id": "ACT-TEC-01",
+          "fecha": "2026-12-02",
+          "responsable_id": "LID-TEC",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar entorno técnico de demostración y sus límites"
+        },
+        {
+          "actividad_id": "ACT-P-TEC-01",
+          "fecha": "2026-12-04",
+          "responsable_id": "MEN-TEC",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar un caso de sistema en entorno de demostración"
+        }
+      ],
+      "solicitud": {
+        "departamento_id": "DEP-TEC",
+        "puesto_id": "P-TEC-01",
+        "fecha_ingreso": "2026-12-01",
+        "modalidad": "remota",
+        "tipo_incorporacion": "nuevo_ingreso",
+        "responsable_rh_id": "RH-01"
+      },
+      "fecha_recepcion_local": "2026-11-16",
+      "metricas": {
+        "recibido_en": null,
+        "primera_propuesta_revisada_en": null,
+        "primera_revision_humana_en": null,
+        "aprobado_primera_revision_sin_cambios": null
+      }
+    }
+  ],
+  "version_esquema": "2.0.0",
+  "zona_horaria": "America/Mexico_City",
+  "periodo_default": "2026-11",
+  "cobertura": {
+    "solicitudes_completa": false,
+    "nota": "Muestra manual de un caso aprobado. No incluye un censo verificable de solicitudes recibidas, ni todas las marcas temporales e historial de primera revisión."
+  },
+  "solicitudes": []
+}
