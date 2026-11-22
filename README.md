@@ -1,15 +1,25 @@
 # MICA · Panel público de demostración
 
-Empresa ficticia; seguimiento de onboarding con una instantánea sanitizada. Sin datos personales, credenciales, conversaciones o backend. Muestra parcial de un caso; tres KPI definidos, «Sin datos» hasta disponer de mediciones completas. La voz está pendiente de integrar.
+Empresa ficticia; datos de negocio sintéticos. Panel: https://wendyvmc.github.io/MICA-Onboarding-Panel/
 
-Código local de Wendy Miranda con apoyo de IA, revisado y probado por componentes. Fuentes de negocio sintéticas creadas para la actividad; no son políticas reales. Proyecto principal privado: WendyVMC/MICA-Onboarding-Assistant; acceso docente por canal privado.
+## Estado verificado al 21/11/2026
 
-## Reproducción
-Node 22 para validación. Desde raíz ejecutar `node tests/panel.test.js` y `node tools/validar_panel.js`. Vista local: `python3 -m http.server 8765 --bind 127.0.0.1 --directory panel`; parar con Ctrl+C. Publicación estática mediante GitHub Actions en rama main, solo si valida. Ajustar Settings → Pages → GitHub Actions antes de desplegar.
+- Un caso piloto aprobado en n8n y consultado por Telegram: ocho actividades, versión 3. Instantánea manual sanitizada; no conexión de datos en vivo.
+- Tres KPIs del piloto con n=1: preparación 0.113243 h, completitud 1/1 y aprobación inicial 1/1. La propuesta y completitud son reconstrucciones auditadas; procedencia y límites visibles en el panel. No representan el mes completo, ahorro ni rendimiento empresarial.
+- Agente de ElevenLabs publicado en español, con fuentes sintéticas y dos herramientas autenticadas. Consulta y solicitud de revisión probadas desde formularios manuales, con respuestas reales de n8n; sin modelos ni audio en esas pruebas.
+- Widget integrado con aceptación previa. No carga el script de ElevenLabs antes de aceptar. Cargarlo no inicia la conversación: el visitante debe pulsar Iniciar llamada y autorizar su micrófono. Retirar consentimiento recarga la página y cierra las conexiones de esa página. La prueba conversacional completa y micrófono denegado siguen pendientes de evidencia.
+- Límites del agente: 60 s por conversación, 20 s de silencio, tres llamadas diarias, una simultánea, sin ráfagas, cola ni archivos. Dominio permitido: wendyvmc.github.io. Las llamadas consumen créditos de ElevenLabs; no se compran recargas desde este panel.
 
-El input manual fallo_deliberado introduce un campo faltante en el artefacto: debe bloquear publicación; desactivarlo restaura el artefacto válido. No usar una falla de hosting como evidencia de validación. Los enlaces de ejecuciones reales se añadirán cuando existan.
+## Reproducción y publicación
 
-## Datos e indicadores
-Fuente: exportación manual del entorno de pruebas n8n por lista blanca; archivos privados no forman parte de este repositorio. Actualizar antes de cada commit/demostración; retraso hasta siguiente exportación/Actions. Las marcas faltantes son null y el censo incompleto se declara. No completar mediciones por invención. Las fórmulas y exclusiones están en el panel y metricas.js.
+Node 22. Desde raíz: `node tests/panel.test.js` y `node tools/validar_panel.js`. Vista local: `python3 -m http.server 8765 --bind 127.0.0.1 --directory panel`; parar con Ctrl+C. La voz publicada solo admite el host autorizado.
 
-HTML en Pages no ejecuta n8n; el bot y el servidor se alojan por separado. Este repositorio no concede acceso al estado privado ni aprueba planes. Las acciones estándar se usan para validar/publicar archivos públicos, sin compras ni recargas.
+GitHub Pages usa Actions. Solo publica si pasan las reglas y fórmulas. Evidencia de bloqueo deliberado: https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44666974987 ; recuperación: https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44667092748 . La actualización de voz pasó: https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44979306898 . No repetir la falla para cada cambio.
+
+## Datos, seguridad y límites
+
+El repositorio contiene solo fuentes públicas y datos por lista blanca. No contiene contraseñas, tokens, usuarios/chats de Telegram, exportaciones privadas ni conversaciones. El identificador público del agente no es una clave API. La contraseña compartida permanece en los almacenes de credenciales de n8n y secretos de ElevenLabs; no se entrega al navegador.
+
+La aprobación permanece humana en Telegram. La voz solo consulta el único folio ficticio autorizado o solicita revisión; no aprueba, contrata ni asigna accesos. Backend n8n y voz se alojan por separado. El dominio permitido restringe hosts, pero no es autenticación individual del visitante; el piloto expone únicamente ese caso ficticio. No se presentan pruebas manuales de herramientas como si fueran una conversación de voz.
+
+Código de Wendy Miranda con apoyo de IA, revisado por componentes. Identidad visual ColoresPasteles. Fuentes de negocio sintéticas elaboradas para la actividad: no son políticas reales. Proyecto principal privado: WendyVMC/MICA-Onboarding-Assistant; acceso docente por canal privado. No se afirma una licencia de distribución que todavía no se haya elegido. Integración del widget conforme a https://elevenlabs.io/docs/eleven-agents/customization/widget ; límites conforme a https://elevenlabs.io/docs/eleven-agents/customization/conversation-flow .
