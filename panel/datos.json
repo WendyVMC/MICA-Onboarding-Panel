@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-19",
-  "fuente": "Piloto simulado n=1; exportación manual sanitizada de n8n. KPIs reconstruidos y auditados, no conexión en vivo.",
+  "actualizado": "2026-11-21",
+  "fuente": "Tres casos ficticios ejecutados y aprobados por la usuaria. Exportación manual sanitizada de n8n; sin conexión de datos en vivo. Dos casos con marcas KPI directas y uno legado reconstruido y auditado.",
   "casos": [
     {
       "caso_id": "MICA-TG-479895069",
@@ -97,6 +97,207 @@
         "primera_revision_humana_en": "2026-11-17T04:04:21.116Z",
         "aprobado_primera_revision_sin_cambios": true
       }
+    },
+    {
+      "caso_id": "MICA-TG-479895074",
+      "departamento": "Comercial",
+      "modalidad": "hibrida",
+      "estado": "registrado_simulado",
+      "version": 3,
+      "actividades": [
+        {
+          "actividad_id": "ACT-G01",
+          "fecha": "2026-12-01",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar datos de la solicitud ficticia"
+        },
+        {
+          "actividad_id": "ACT-G02",
+          "fecha": "2026-12-03",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Preparar agenda de bienvenida simulada"
+        },
+        {
+          "actividad_id": "ACT-G03",
+          "fecha": "2026-12-04",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Presentar MICA y sus canales de apoyo ficticios"
+        },
+        {
+          "actividad_id": "ACT-G04",
+          "fecha": "2026-12-04",
+          "responsable_id": "TI-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Realizar orientación sobre manejo de datos sintéticos"
+        },
+        {
+          "actividad_id": "ACT-G05",
+          "fecha": "2026-12-10",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar avance de incorporación de primera semana"
+        },
+        {
+          "actividad_id": "ACT-G06",
+          "fecha": "2026-12-03",
+          "responsable_id": "TI-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Comprobar entorno de práctica remota sin asignar accesos reales"
+        },
+        {
+          "actividad_id": "ACT-G07",
+          "fecha": "2026-12-03",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Compartir orientación de sede ficticia sin coordinar visitas reales"
+        },
+        {
+          "actividad_id": "ACT-COM-01",
+          "fecha": "2026-12-05",
+          "responsable_id": "LID-COM",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar proceso comercial y catálogo de servicios ficticios"
+        },
+        {
+          "actividad_id": "ACT-P-COM-01",
+          "fecha": "2026-12-07",
+          "responsable_id": "MEN-COM",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Preparar una propuesta comercial ficticia sin enviarla"
+        }
+      ],
+      "solicitud": {
+        "departamento_id": "DEP-COM",
+        "puesto_id": "P-COM-01",
+        "fecha_ingreso": "2026-12-04",
+        "modalidad": "hibrida",
+        "tipo_incorporacion": "nuevo_ingreso",
+        "responsable_rh_id": "RH-01"
+      },
+      "fecha_recepcion_local": "2026-11-21",
+      "metricas": {
+        "recibido_en": "2026-11-22T03:26:12.000Z",
+        "primera_propuesta_revisada_en": "2026-11-22T03:29:14.340Z",
+        "primera_revision_humana_en": "2026-11-22T03:31:05.048Z",
+        "aprobado_primera_revision_sin_cambios": true
+      }
+    },
+    {
+      "caso_id": "MICA-TG-479895075",
+      "departamento": "Administración",
+      "modalidad": "presencial",
+      "estado": "registrado_simulado",
+      "version": 3,
+      "actividades": [
+        {
+          "actividad_id": "ACT-G01",
+          "fecha": "2026-12-04",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar datos de la solicitud ficticia"
+        },
+        {
+          "actividad_id": "ACT-G02",
+          "fecha": "2026-12-06",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Preparar agenda de bienvenida simulada"
+        },
+        {
+          "actividad_id": "ACT-G03",
+          "fecha": "2026-12-07",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Presentar MICA y sus canales de apoyo ficticios"
+        },
+        {
+          "actividad_id": "ACT-G04",
+          "fecha": "2026-12-07",
+          "responsable_id": "TI-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Realizar orientación sobre manejo de datos sintéticos"
+        },
+        {
+          "actividad_id": "ACT-G05",
+          "fecha": "2026-12-13",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar avance de incorporación de primera semana"
+        },
+        {
+          "actividad_id": "ACT-G07",
+          "fecha": "2026-12-06",
+          "responsable_id": "RH-01",
+          "regla_id": "POL-04",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Compartir orientación de sede ficticia sin coordinar visitas reales"
+        },
+        {
+          "actividad_id": "ACT-ADM-01",
+          "fecha": "2026-12-08",
+          "responsable_id": "LID-ADM",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Revisar flujo administrativo con documentos ficticios"
+        },
+        {
+          "actividad_id": "ACT-P-ADM-01",
+          "fecha": "2026-12-10",
+          "responsable_id": "MEN-ADM",
+          "regla_id": "POL-05",
+          "fuente_version": "1.0.0",
+          "vencida_al_recibir": false,
+          "titulo": "Clasificar una muestra de documentos administrativos ficticios"
+        }
+      ],
+      "solicitud": {
+        "departamento_id": "DEP-ADM",
+        "puesto_id": "P-ADM-01",
+        "fecha_ingreso": "2026-12-07",
+        "modalidad": "presencial",
+        "tipo_incorporacion": "nuevo_ingreso",
+        "responsable_rh_id": "RH-01"
+      },
+      "fecha_recepcion_local": "2026-11-21",
+      "metricas": {
+        "recibido_en": "2026-11-22T03:26:27.000Z",
+        "primera_propuesta_revisada_en": "2026-11-22T03:34:15.714Z",
+        "primera_revision_humana_en": "2026-11-22T03:35:38.972Z",
+        "aprobado_primera_revision_sin_cambios": true
+      }
     }
   ],
   "version_esquema": "2.0.0",
@@ -104,12 +305,22 @@
   "periodo_default": "2026-11",
   "cobertura": {
     "solicitudes_completa": true,
-    "nota": "Censo del piloto autorizado de esta instancia hasta el 19/11/2026: 1 solicitud, 1 propuesta y 1 primera revisión. Propuesta reconstruida como vencimiento menos 24 h; incluye recuperación manual del fallo A3. Completitud reconstruida desde el caso validado y su evento. Aprobación contrastada con el único evento de revisión y versiones 1/2/3. No representa el mes completo ni el rendimiento de la empresa; n=1 no permite generalizar."
+    "nota": "Censo del piloto autorizado de esta instancia del 16 al 21/11/2026: 3 solicitudes, 3 propuestas y 3 primeras revisiones; excluye usuario interno 0 y la instancia anterior. Comercial y Administración tienen marcas directas. En Tecnología la propuesta se reconstruye como vencimiento menos 24 h y la completitud desde su evento validado; primera aprobación contrastada con su censo y versiones. Los tiempos incluyen espera y recuperación manual. Muestra n=3: no representa todo el mes ni demuestra ahorro o desempeño empresarial."
   },
   "solicitudes": [
     {
       "solicitud_id": "SOL-TG-479895069",
       "recibido_en": "2026-11-17T03:53:58.000Z",
+      "completa_al_recibir": true
+    },
+    {
+      "solicitud_id": "SOL-TG-479895074",
+      "recibido_en": "2026-11-22T03:26:12.000Z",
+      "completa_al_recibir": true
+    },
+    {
+      "solicitud_id": "SOL-TG-479895075",
+      "recibido_en": "2026-11-22T03:26:27.000Z",
       "completa_al_recibir": true
     }
   ]
