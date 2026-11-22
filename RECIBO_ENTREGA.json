@@ -1,0 +1,10 @@
+{
+  "fecha": "2026-11-21",
+  "archivo": "Miranda_Wendy_AI_Tools_ProyectoFinal.zip",
+  "sha256": "f4f043f92d148d1539b3b6e026f753c0d35c4e257f975b18ed0ccba0ae561075",
+  "bytes": 18214002,
+  "rama": "main",
+  "contenido": "Código completo organizado, workflows sanitizados, datos, skills, loops, pruebas, costos, informe y video dentro del ZIP",
+  "panel_commit": "6b4be6693fdb96998c7e8d863a5705b9261c7c5a",
+  "nota": "El commit del archivo publicado se obtiene del historial del repositorio, evitando un hash autorreferencial."
+}
