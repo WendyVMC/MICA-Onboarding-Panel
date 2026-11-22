@@ -20,3 +20,21 @@ function render(){
 }
 async function cargar(){try{const r=await fetch('datos.json',{cache:'no-store'});if(!r.ok)throw Error('LECTURA');const d=await r.json();if(d.version_esquema!=='2.0.0'||d.zona_horaria!==MicaMetricas.ZONA||!Array.isArray(d.casos)||!Array.isArray(d.solicitudes)||!d.cobertura||d.casos.some(c=>!c.metricas||!Array.isArray(c.actividades)))throw Error('FORMATO');data=d;$('month').value=d.periodo_default;$('source').textContent='Corte: '+d.actualizado+' · '+d.zona_horaria+'. '+d.fuente;$('coverage').textContent=d.cobertura.nota;pintarKPI();render();for(const id of ['q','state'])$(id).addEventListener('input',render);$('month').addEventListener('input',pintarKPI);$('reset').addEventListener('click',()=>{$('q').value='';$('state').value='';render()});}catch{$('message').textContent='No fue posible cargar los datos. Intenta recargar la página o usa Telegram; no se muestran mediciones como si fueran cero.';for(const id of ['preparacion','completitud','aprobacion'])$(id).textContent='Sin datos';}}
 cargar();
+
+// Consentimiento por visita: sin cookies, claves privadas ni inicio automático.
+(function configurarVoz(){
+ const consent=$('voice-consent'),enable=$('voice-enable'),status=$('voice-status'),revoke=$('voice-revoke');
+ consent.addEventListener('change',()=>{enable.disabled=!consent.checked;});
+ revoke.addEventListener('click',()=>{window.location.reload();});
+ enable.addEventListener('click',()=>{
+  if(!consent.checked)return;
+  enable.disabled=true;consent.disabled=true;revoke.hidden=false;
+  status.textContent='Cargando ElevenLabs. Esto todavía no inicia una llamada ni activa el micrófono.';
+  const script=document.createElement('script');
+  script.src='https://unpkg.com/@elevenlabs/convai-widget-embed';script.async=true;
+  const timer=setTimeout(()=>{status.textContent='ElevenLabs tarda en responder. Si no aparece el asistente, cierra esta conexión y usa Telegram.';},15000);
+  script.onload=()=>{clearTimeout(timer);const widget=document.createElement('elevenlabs-convai');widget.setAttribute('agent-id','agent_3701m7kv9ss6fy6ts7w4ep73j911');widget.setAttribute('language','es');$('voice-widget').append(widget);enable.hidden=true;status.textContent='Asistente habilitado. Pulsa su botón para iniciar una llamada y autoriza el micrófono solo si deseas hablar. Si se deniega o falla, usa Telegram. Para terminar, cuelga en el widget o retira tu consentimiento.';};
+  script.onerror=()=>{clearTimeout(timer);status.textContent='No se pudo cargar ElevenLabs. Usa Telegram o cierra esta conexión antes de intentar de nuevo.';};
+  document.head.append(script);
+ });
+})();
