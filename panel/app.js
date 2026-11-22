@@ -19,22 +19,35 @@ function render(){
  $('chart').setAttribute('aria-label',Object.entries(counts).map(([r,n])=>r+': '+n+' actividades').join('; ')||'Sin actividades');$('chart-empty').hidden=Object.keys(counts).length!==0;
 }
 async function cargar(){try{const r=await fetch('datos.json',{cache:'no-store'});if(!r.ok)throw Error('LECTURA');const d=await r.json();if(d.version_esquema!=='2.0.0'||d.zona_horaria!==MicaMetricas.ZONA||!Array.isArray(d.casos)||!Array.isArray(d.solicitudes)||!d.cobertura||d.casos.some(c=>!c.metricas||!Array.isArray(c.actividades)))throw Error('FORMATO');data=d;$('month').value=d.periodo_default;$('source').textContent='Corte: '+d.actualizado+' · '+d.zona_horaria+'. '+d.fuente;$('coverage').textContent=d.cobertura.nota;pintarKPI();render();for(const id of ['q','state'])$(id).addEventListener('input',render);$('month').addEventListener('input',pintarKPI);$('reset').addEventListener('click',()=>{$('q').value='';$('state').value='';render()});}catch{$('message').textContent='No fue posible cargar los datos. Intenta recargar la página o usa Telegram; no se muestran mediciones como si fueran cero.';for(const id of ['preparacion','completitud','aprobacion'])$(id).textContent='Sin datos';}}
-cargar();
+if(typeof document!=='undefined')cargar();
 
-// Consentimiento por visita: sin cookies, claves privadas ni inicio automático.
-(function configurarVoz(){
- const consent=$('voice-consent'),enable=$('voice-enable'),status=$('voice-status'),revoke=$('voice-revoke');
- consent.addEventListener('change',()=>{enable.disabled=!consent.checked;});
- revoke.addEventListener('click',()=>{window.location.reload();});
- enable.addEventListener('click',()=>{
-  if(!consent.checked)return;
-  enable.disabled=true;consent.disabled=true;revoke.hidden=false;
-  status.textContent='Cargando ElevenLabs. Esto todavía no inicia una llamada ni activa el micrófono.';
-  const script=document.createElement('script');
-  script.src='https://unpkg.com/@elevenlabs/convai-widget-embed';script.async=true;
-  const timer=setTimeout(()=>{status.textContent='ElevenLabs tarda en responder. Si no aparece el asistente, cierra esta conexión y usa Telegram.';},15000);
-  script.onload=()=>{clearTimeout(timer);const widget=document.createElement('elevenlabs-convai');widget.setAttribute('agent-id','agent_3701m7kv9ss6fy6ts7w4ep73j911');widget.setAttribute('language','es');$('voice-widget').append(widget);enable.hidden=true;status.textContent='Asistente habilitado. Pulsa su botón para iniciar una llamada y autoriza el micrófono solo si deseas hablar. Si se deniega o falla, usa Telegram. Para terminar, cuelga en el widget o retira tu consentimiento.';};
-  script.onerror=()=>{clearTimeout(timer);status.textContent='No se pudo cargar ElevenLabs. Usa Telegram o cierra esta conexión antes de intentar de nuevo.';};
-  document.head.append(script);
- });
-})();
+// El preflight detiene la captura antes de cargar ElevenLabs; no transmite audio.
+async function comprobarMicrofono(mediaDevices){
+ if(!mediaDevices||typeof mediaDevices.getUserMedia!=='function')return {ok:false,codigo:'NO_COMPATIBLE',mensaje:'Este navegador no permite comprobar el micrófono. Usa Telegram como alternativa.'};
+ try{const stream=await mediaDevices.getUserMedia({audio:true});for(const track of stream.getTracks())track.stop();return {ok:true};}
+ catch(error){const codigo=['NotAllowedError','SecurityError'].includes(error.name)?'MICROFONO_DENEGADO':['NotFoundError','NotReadableError'].includes(error.name)?'MICROFONO_NO_DISPONIBLE':'MICROFONO_ERROR';return {ok:false,codigo,mensaje:codigo==='MICROFONO_DENEGADO'?'No se autorizó el micrófono. No se inició una llamada; puedes usar Telegram.':'No se pudo abrir el micrófono. No se inició una llamada; puedes usar Telegram.'};}
+}
+async function habilitarVoz(ui,mediaDevices,cargarWidget){
+ if(!ui.consent.checked)return 'sin_consentimiento';
+ ui.enable.disabled=true;ui.consent.disabled=true;ui.revoke.hidden=false;
+ ui.status.textContent='Comprobando el permiso del micrófono. Todavía no se inicia una llamada.';
+ const permiso=await comprobarMicrofono(mediaDevices);
+ if(!permiso.ok){ui.status.textContent=permiso.mensaje;return permiso.codigo;}
+ ui.status.textContent='Micrófono comprobado y captura detenida. Cargando ElevenLabs; todavía no se inicia una llamada.';
+ try{await cargarWidget();ui.enable.hidden=true;ui.status.textContent='Asistente habilitado. Pulsa Iniciar llamada para conversar. Para terminar, cuelga en el widget o retira tu consentimiento. Si falla la conexión, usa Telegram.';return 'widget_listo';}
+ catch{ui.status.textContent='No se pudo cargar ElevenLabs. No se inició una llamada; usa Telegram o retira el consentimiento antes de intentar de nuevo.';return 'SERVICIO_NO_DISPONIBLE';}
+}
+function cargarWidgetVoz(){return new Promise((resolve,reject)=>{
+ const script=document.createElement('script');script.src='https://unpkg.com/@elevenlabs/convai-widget-embed';script.async=true;
+ const timer=setTimeout(()=>reject(Error('TIMEOUT_WIDGET')),15000);
+ script.onload=()=>{clearTimeout(timer);const widget=document.createElement('elevenlabs-convai');widget.setAttribute('agent-id','agent_3701m7kv9ss6fy6ts7w4ep73j911');widget.setAttribute('language','es');$('voice-widget').append(widget);resolve();};
+ script.onerror=()=>{clearTimeout(timer);reject(Error('WIDGET_NO_DISPONIBLE'));};document.head.append(script);
+});}
+function configurarVoz(){
+ const ui={consent:$('voice-consent'),enable:$('voice-enable'),status:$('voice-status'),revoke:$('voice-revoke')};
+ ui.consent.addEventListener('change',()=>{ui.enable.disabled=!ui.consent.checked;});
+ ui.revoke.addEventListener('click',()=>{window.location.reload();});
+ ui.enable.addEventListener('click',()=>habilitarVoz(ui,navigator.mediaDevices,cargarWidgetVoz));
+}
+if(typeof document!=='undefined'){configurarVoz();}
+if(typeof module!=='undefined'&&module.exports)module.exports={comprobarMicrofono,habilitarVoz};
