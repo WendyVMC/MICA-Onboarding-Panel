@@ -4,10 +4,10 @@ Empresa ficticia; datos de negocio sintéticos. Panel: https://wendyvmc.github.i
 
 ## Estado verificado al 21/11/2026
 
-- Un caso piloto aprobado en n8n y consultado por Telegram: ocho actividades, versión 3. Instantánea manual sanitizada; no conexión de datos en vivo.
-- Tres KPIs del piloto con n=1: preparación 0.113243 h, completitud 1/1 y aprobación inicial 1/1. La propuesta y completitud son reconstrucciones auditadas; procedencia y límites visibles en el panel. No representan el mes completo, ahorro ni rendimiento empresarial.
+- Tres casos piloto aprobados por la usuaria en n8n y consultados por Telegram: Tecnología remota (8 actividades), Comercial híbrido (9) y Administración presencial (8), todos versión 3. Instantánea manual sanitizada; no conexión de datos en vivo.
+- Tres KPIs del piloto con n=3 y denominadores visibles. Dos casos tienen marcas directas; el caso legado de Tecnología contiene reconstrucciones auditadas de propuesta y completitud. Procedencia y límites visibles en el panel. No representan el mes completo, ahorro ni rendimiento empresarial.
 - Agente de ElevenLabs publicado en español, con fuentes sintéticas y dos herramientas autenticadas. Consulta y solicitud de revisión probadas desde formularios manuales, con respuestas reales de n8n; sin modelos ni audio en esas pruebas.
-- Widget integrado con aceptación previa. No carga el script de ElevenLabs antes de aceptar. Cargarlo no inicia la conversación: el visitante debe pulsar Iniciar llamada y autorizar su micrófono. Retirar consentimiento recarga la página y cierra las conexiones de esa página. La prueba conversacional completa y micrófono denegado siguen pendientes de evidencia.
+- Widget integrado con aceptación previa. No carga el script de ElevenLabs antes de aceptar. Cargarlo no inicia la conversación: el visitante debe pulsar Iniciar llamada y autorizar su micrófono. Retirar consentimiento recarga la página y cierra las conexiones de esa página. Conversación real en español verificada: ambas herramientas exitosas antes del cierre por duración máxima; 61 s en metadatos y 831 créditos (667 plataforma + 164 LLM). La prueba específica de micrófono denegado sigue pendiente.
 - Límites del agente: 60 s por conversación, 20 s de silencio, tres llamadas diarias, una simultánea, sin ráfagas, cola ni archivos. Dominio permitido: wendyvmc.github.io. Las llamadas consumen créditos de ElevenLabs; no se compran recargas desde este panel.
 
 ## Reproducción y publicación
