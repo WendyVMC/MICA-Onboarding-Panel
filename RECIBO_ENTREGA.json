@@ -1,10 +1,15 @@
 {
-  "fecha": "2026-11-21",
+  "version": "entrega-v2-20261126",
+  "fecha_consolidacion": "2026-11-26",
+  "fecha_ultima_medicion_operativa": "2026-11-21",
   "archivo": "Miranda_Wendy_AI_Tools_ProyectoFinal.zip",
-  "sha256": "f4f043f92d148d1539b3b6e026f753c0d35c4e257f975b18ed0ccba0ae561075",
-  "bytes": 18214002,
+  "sha256": "5ec17143688ee5ff333ebb7838984b28231d7c9ca1da353df899f1bcaff4b97f",
+  "bytes": 18356445,
   "rama": "main",
-  "contenido": "Código completo organizado, workflows sanitizados, datos, skills, loops, pruebas, costos, informe y video dentro del ZIP",
-  "panel_commit": "6b4be6693fdb96998c7e8d863a5705b9261c7c5a",
-  "nota": "El commit del archivo publicado se obtiene del historial del repositorio, evitando un hash autorreferencial."
+  "casos": 4,
+  "llamadas_modelo_medidas": 42,
+  "subtotal_gateway_calculado_usd": 0.0061761,
+  "costo_no_es_factura": true,
+  "voz_nueva_ensayo": "pendiente_por_decision_de_la_usuaria",
+  "nota": "El commit final se obtiene del historial tras publicación; no se incrusta un hash autorreferencial. Código completo organizado dentro del mismo ZIP público."
 }

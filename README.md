@@ -1,36 +1,34 @@
-# MICA · Entrega final de AI Tools
+# MICA · Entrega consolidada v2
 
-Wendy Miranda · 21/11/2026 · empresa y datos de negocio ficticios.
+Wendy Miranda · 26/11/2026 · empresa y datos de negocio ficticios. Mediciones operativas hasta el 21/11/2026.
 
-## Archivos de entrega
+## Abrir la entrega
 
-- [Descargar el proyecto completo](Miranda_Wendy_AI_Tools_ProyectoFinal.zip): código organizado, workflows n8n, bases sintéticas, dos skills, dos loops, evidencias, pruebas, costos, informe y video de **6:55**.
-- [Informe técnico y empresarial](MICA_Informe_Final.pdf): **10 páginas**.
-- [Costos](costos.csv) · [Pruebas P01–P14](pruebas.csv) · [Recibo y SHA-256](RECIBO_ENTREGA.json).
-- [Abrir panel público](https://wendyvmc.github.io/MICA-Onboarding-Panel/).
+- [Descargar proyecto completo](Miranda_Wendy_AI_Tools_ProyectoFinal.zip): código organizado, workflows, bases, skills, loops, pruebas, costos, informe, video y manual.
+- [Informe técnico y empresarial](MICA_Informe_Final.pdf), 10 páginas.
+- [Registro de costos](costos.csv) · [Matriz P01–P14](pruebas.csv) · [Recibo y SHA-256](RECIBO_ENTREGA.json).
+- [Panel público](https://wendyvmc.github.io/MICA-Onboarding-Panel/).
 
-El **código completo y el manual reproducible están dentro del ZIP**, en una carpeta única. Los archivos desplegados del panel también están descomprimidos en este repositorio. El ZIP publicado es el mismo de la entrega local, comprobable por SHA-256; no se afirma que la raíz descomprimida del repositorio contenga todas las carpetas del proyecto. Para reconstruir el sistema completo, extraer el ZIP y abrir README.md y docs/MANUAL_REPRODUCCION.md.
+El código completo está dentro del ZIP, en una carpeta única. Extraer y abrir README.md, docs/INDICE_RUBRICA.md, docs/ESTADO_VIGENTE.md y docs/MANUAL_REPRODUCCION.md. Los archivos del panel también están descomprimidos en este repositorio; no se afirma que todas las carpetas del proyecto estén descomprimidas en la raíz. El recibo externo identifica el contenido exacto del ZIP.
 
-## Resultado verificado
+## Evidencia consolidada
 
-Tres casos completos con cinco roles trazables: Tecnología remota (8 actividades), Comercial híbrido (9) y Administración presencial (8), todos aprobados explícitamente y registrados como simulados. Dos skills y dos loops integrados; corrección V1→V2 y reutilización demostradas. Una conversación real de ElevenLabs en español consultó el mismo folio y solicitó revisión mediante herramientas autenticadas.
+Cuatro casos completos y aprobados: Tecnología remota (piloto y ensayo), Comercial híbrido y Administración presencial. Cinco roles trazables, dos skills y dos loops usados, V1/V2 y reutilización. Hay 33 actividades propuestas; no se presentan como realizadas. KPI: 0.082243 h/caso (incluye espera), completitud 4/5=80%, aprobación inicial 4/4=100%. Tres casos tienen marcas directas y uno conserva reconstrucciones auditadas; muestra pequeña sin prueba de ROI.
 
-Tres KPI con denominadores visibles: preparación media 0.098030 h/caso (incluye espera), completitud **3/4 = 75%** y aprobación inicial **3/3 = 100%**. Dos casos tienen marcas directas; Tecnología conserva reconstrucciones auditadas. Instantánea manual sanitizada, sin datos en vivo; muestra pequeña, sin evidencia de ROI.
+42 llamadas Gateway medidas: USD 0.00617610 calculados, no factura conciliada. Promedio de los cuatro casos completos: USD 0.00115905 de LLM n8n por caso. Una conversación histórica de ElevenLabs: 831 créditos (667 plataforma + 164 LLM), componente LLM mostrado USD 0.0154, sin sumarlo otra vez. USD 5 reportados como recarga, no consumo. Se incluye sensibilidad reproducible del contenido de desarrollo, separada del uso real desconocido, seis escenarios mensuales y comparación offline de calidad/costo en cuatro planes.
 
-34 llamadas Gateway medidas, USD 0.00503595 calculados; voz 831 créditos (667 plataforma y 164 LLM), con USD 0.0154 mostrado para su componente LLM. **Recarga reportada de USD 5 no equivale a consumo**; proveedor y facturación final sin conciliar. No sumar créditos como dinero ni duplicar el componente LLM.
+Voz real histórica del folio 069: consulta y revisión con herramientas autenticadas. Folio de demostración actual documentado: MICA-TG-479895082; consulta manual autenticada verificada. La conversación de ese nuevo folio y la prueba completa actual se reservan para la presentación. No se afirma que hayan ocurrido. El video de respaldo dura 6:55 y conserva el corte original de tres casos; es recorrido narrado de evidencias con voz local, no ejecución continua nueva.
 
-## Validación y límites
+## Verificación, reproducción y límites
 
-11 grupos locales de comprobaciones pasaron desde la carpeta de entrega, sin APIs. Pruebas reales, mixtas y simuladas están identificadas en pruebas.csv. Denegación de micrófono, timeout y caída de servicio se prueban mediante fallos controlados del código, no se presentan como incidentes reales del proveedor. El video es un recorrido narrado de evidencias existentes con voz local, no una nueva ejecución continua.
+Doce grupos de comprobaciones locales aprobados desde la carpeta de entrega, sin APIs. Pruebas reales, mixtas y simulaciones controladas se distinguen en pruebas.csv. Micrófono denegado, timeout y caída se modelaron en el manejador real, sin atribuir incidentes al proveedor. La autoevaluación completa por cinco aspectos está en docs/AUTOEVALUACION_SKILLS_LOOPS.md dentro del ZIP.
 
-- [Actions final correcto](https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44983672821).
-- [Bloqueo real por validación](https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44666974987).
+Node 22 recomendado; Python 3.9+ para exportación. El manual describe importación, credenciales por nombre, tabla privada, caso, resultado esperado y parada. No contiene claves ni tokens. Las exportaciones importan inactivas; IA apagada, un solo receptor Telegram. Para una generación nueva: comprobar saldo, autorizar presupuesto y habilitar exclusivamente su folio; no regenerar aprobados. La autorización de cada operación empresarial es humana.
+
+Bot: https://t.me/mica_wvmc_onboarding_bot . Acceso de evaluación por el canal privado del curso o bajo supervisión de Wendy; nunca enviar tokens. La voz pública solo accede a un folio ficticio. Límites documentados: 60 s, tres conversaciones diarias y una simultánea. Vigencia, cuotas y acceso se comprueban antes de clase; observaciones de saldo del 21/11 no garantizan disponibilidad actual. No se recarga ni contrata automáticamente.
+
+- [Actions bloqueado por validación](https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44666974987).
 - [Corrección y recuperación](https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44667092748).
+- [Actualización del ensayo](https://github.com/WendyVMC/MICA-Onboarding-Panel/actions/runs/44987005954).
 
-Node 22 recomendado; Python 3.9+ para exportación. Pruebas sin pago: node tests/panel.test.js y node tools/validar_panel.js. Vista local: python3 -m http.server 8765 --bind 127.0.0.1 --directory panel. El ZIP incluye todas las instrucciones para importar y volver a vincular credenciales.
-
-No se publican claves, tokens, chats personales, tablas privadas ni audio/transcripción personal. El ID del agente es público y no es una API key. El servicio de voz solo admite un folio ficticio; no aprueba planes ni toma decisiones laborales. Bot: https://t.me/mica_wvmc_onboarding_bot, acceso operativo restringido a la cuenta autorizada. No ampliar permisos sin revisión.
-
-IA desactivada al cerrar los ensayos. Voz limitada a 60 s, tres llamadas diarias y una simultánea. Mantener n8n y ElevenLabs disponibles para evaluar; no se recargan ni contratan planes automáticamente. No se demuestra atomicidad concurrente. La estudiante debe revisar el informe y hacer su defensa individual de máximo 12 minutos; se incluye guion.
-
-Código y bases sintéticas propios con apoyo de IA, declarado en docs/DECLARACION_IA_Y_FUENTES.md dentro del ZIP. Identidad ColoresPasteles. No se declara una licencia abierta no elegida.
+Wendy debe revisar y defender individualmente el proyecto en hasta 12 minutos y subirlo al aula. No se garantiza una nota docente. Declaración de IA y fuentes dentro del ZIP; datos sintéticos propios, identidad ColoresPasteles. No se declara una licencia abierta no elegida. Sin garantía de atomicidad concurrente ni conciliación de facturas aún desconocidas.
